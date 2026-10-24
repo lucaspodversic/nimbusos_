@@ -1,0 +1,10 @@
+{
+  "description": "NimbusOS A/B partition layout",
+  "sector_size": 512,
+  "partitions": [
+    {"name": "esp", "size_mb": 256, "fs": "fat32", "type": "efi"},
+    {"name": "system_a", "size_mb": 4096, "fs": "nimbusfs", "slot": "A"},
+    {"name": "system_b", "size_mb": 4096, "fs": "nimbusfs", "slot": "B"},
+    {"name": "data", "size_mb": 0, "fs": "nimbusfs", "grow": true}
+  ]
+}

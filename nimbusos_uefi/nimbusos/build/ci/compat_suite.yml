@@ -1,0 +1,12 @@
+name: NimbusOS Compat Suite
+on:
+  workflow_dispatch:
+jobs:
+  compat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Placeholder
+        run: |
+          echo "PE compat suite runs when userland Win32 is ready."
+          test -f tests/app_compat/top_1000_apps.csv

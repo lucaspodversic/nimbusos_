@@ -1,0 +1,8 @@
+LIBRARY kernel32
+EXPORTS
+NimbusCreateFileA
+NimbusReadFile
+NimbusWriteFile
+NimbusCloseHandle
+NimbusVirtualAlloc
+NimbusGetTickCount

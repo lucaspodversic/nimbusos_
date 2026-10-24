@@ -1,0 +1,6 @@
+LIBRARY ntdll
+EXPORTS
+LdrParsePe
+LdrInitializeThunk
+RtlAllocateHeap
+RtlFreeHeap

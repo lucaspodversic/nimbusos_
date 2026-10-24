@@ -1,0 +1,8 @@
+[package]
+name = "nimbus_bluetooth_service"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Bluetooth bajo demanda."
+[lib]
+path = "lib.rs"

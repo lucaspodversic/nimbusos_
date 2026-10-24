@@ -1,0 +1,42 @@
+# Build
+/out/
+/out-host/
+/target/
+**/cmake-build-*/
+compile_commands.json
+*.o
+*.a
+*.so
+*.exe
+*.dll
+*.iso
+*.vhdx
+*.img
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Rust
+Cargo.lock
+
+# Test / fuzz artifacts
+/tests/**/results/
+*.profraw
+*.gcda
+*.gcno
+
+# Secrets
+*.pem
+*.key

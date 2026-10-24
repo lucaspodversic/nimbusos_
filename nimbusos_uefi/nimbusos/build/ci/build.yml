@@ -1,0 +1,22 @@
+name: NimbusOS Build
+on: [push, pull_request]
+jobs:
+  host-kernel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install deps
+        run: sudo apt-get update && sudo apt-get install -y cmake build-essential
+      - name: Configure
+        run: cmake -S . -B out -DNIMBUS_HOST=ON
+      - name: Build
+        run: cmake --build out -j$(nproc)
+      - name: Test
+        run: ctest --test-dir out --output-on-failure
+  rust-workspace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Test Rust
+        run: cargo test --workspace

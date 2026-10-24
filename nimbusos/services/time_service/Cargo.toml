@@ -1,0 +1,8 @@
+[package]
+name = "nimbus_time_service"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "SNTP/hora."
+[lib]
+path = "lib.rs"

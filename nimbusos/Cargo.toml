@@ -1,0 +1,37 @@
+# NimbusOS — workspace Rust (FS, servicios, shell, window server).
+[workspace]
+resolver = "2"
+members = [
+  "drivers/filesystem/nimbusfs",
+  "userland/win32k_server",
+  "services/scm",
+  "services/compositor",
+  "services/memory_governor",
+  "shell",
+  "services/smss",
+  "services/csrss_lite",
+  "services/wininit",
+  "services/winlogon",
+  "services/lsass_lite",
+  "services/audio_engine",
+  "services/network_manager",
+  "services/update_service",
+  "services/installer_service",
+  "services/defender_lite",
+  "services/firewall",
+  "services/search_indexer",
+  "services/print_spooler",
+  "services/time_service",
+  "services/power_service",
+  "services/crypto_service",
+  "services/eventlog",
+  "services/task_scheduler",
+  "services/bluetooth_service",
+  "services/geolocation",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["NimbusOS Contributors"]

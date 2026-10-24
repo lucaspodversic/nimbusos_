@@ -1,0 +1,19 @@
+name: NimbusOS QEMU Boot
+on:
+  workflow_dispatch:
+  push:
+    paths: ["boot/**", "hal/**", "kernel/**", "build/**"]
+jobs:
+  qemu-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Host tests first
+        run: |
+          cmake -S . -B out -DNIMBUS_HOST=ON
+          cmake --build out -j
+          ctest --test-dir out --output-on-failure
+      - name: QEMU placeholder
+        run: |
+          echo "Bare-metal QEMU boot image lands in a later phase."
+          python3 build/make_iso.py -o /tmp/nimbusos.iso
